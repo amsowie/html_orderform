@@ -5,9 +5,74 @@
 </head>
 <body>
     <h1>Order!</h1>
-    <h3>Prices</h3><br>
-    <h4>Melon Name Price per lb</h4>
-    <p>Watermelon   $1.59</p>
-    <p>Honeydew     $0.99</p>
+    <h3>Prices</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Melon Name</th>
+                <th>Price per lb</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Watermeleon</td>
+                <td>$1.59</td>
+            </tr>
+
+            <tr>
+                <td>Honeydew</td>
+                <td>$0.09</td>
+            </tr>
+            <tr>
+                <td>Canteloupe</td>
+                <td>$9.99</td>
+            </tr>
+            <tr>
+                <td>Crenshaw</td>
+                <td>$3.49</td>
+            </tr>
+            <tr>
+                <td>Canary</td>
+                <td>$100</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Place your orders here! You know you want to.</p>
+    <form action="https://ubermelon-order-form.herokuapp.com/process" method="GET">
+        First Name <input type="text" name="firstname">
+        <br>
+        Last Name <input type="text" name="lastname">
+        <br>
+        Melon Type <select name="melontype">
+          <option value="watermelon">Watermelon</option>
+          <option value="honeydew">Honeydew</option>
+          <option value="canteloupe">Canteloupe</option>
+          <option value="crenshaw">Crenshaw</option>
+          <option value="canary">Canary</option>
+        </select>
+        <br>
+        Quantity*: <input type="text" name="quantity">
+        <br>
+        Delivery Time 
+            <input type="radio" name="time" value="am">12:00am-12:00pm
+            <input type="radio" name="time" value="pm">12:00pm-12:00am
+            <input type="radio" name="time" value="wat">Time is an illusion
+        <br>
+        Returning Customer?
+        <input type="radio" name="returning" value="yes">Yes
+        <input type="radio" name="returning" value="no">No
+        <br>
+        For Statistical Purposes: 
+        <input type="checkbox" name="animal" value="dog">Dog
+        <input type="checkbox" name="animal" value="cat">Cat
+        <input type="checkbox" name="animal" value="hedgehog">Hedgehog
+        <input type="checkbox" name="animal" value="balloonicorn">Balloonicorn
+        <input type="checkbox" name="animal" value="yak">Yak
+        <br>
+        <input type="submit" value="Place order!">
+    </form>
 </body>
+<footer>*Quantity disclaimer</footer>
 </html>
